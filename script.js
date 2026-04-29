@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navToggle.setAttribute('aria-expanded', navList.classList.contains('open'));
     });
 
-    // Close on link click
     navList.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navList.classList.remove('open');
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Close on outside click
     document.addEventListener('click', (e) => {
       if (!navToggle.contains(e.target) && !navList.contains(e.target)) {
         navList.classList.remove('open');
@@ -113,30 +111,43 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ============================================================
-  // CONTACT FORM
+  // CONTACT FORM — Formspree
   // ============================================================
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.innerHTML;
+      const originalHTML = btn.innerHTML;
 
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-      // Simulate sending (replace with Formspree / EmailJS in production)
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-        btn.style.background = '#059669';
-        form.reset();
+      try {
+        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form),
+        });
 
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 3000);
-      }, 1200);
+        if (response.ok) {
+          btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+          btn.style.background = '#059669';
+          form.reset();
+        } else {
+          btn.innerHTML = '<i class="fas fa-times"></i> Failed — Try Again';
+          btn.style.background = '#dc2626';
+        }
+      } catch {
+        btn.innerHTML = '<i class="fas fa-times"></i> Network Error';
+        btn.style.background = '#dc2626';
+      }
+
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
     });
   }
 
