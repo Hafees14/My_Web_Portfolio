@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hafees Ahamed | Computer Engineering Undergraduate</title>
-<meta name="description" content="Portfolio of Hafees Ahamed — Computer Engineering undergraduate at University of Peradeniya, passionate about embedded systems and systems programming.">
-<link rel="canonical" href="https://hafees14.github.io/My_Web_Portfolio_v2/index.html">
+<title>Contact | Hafees Ahamed</title>
+<meta name="description" content="Contact Hafees Ahamed.">
+<link rel="canonical" href="https://hafees14.github.io/My_Web_Portfolio_v2/contact.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hafees Ahamed | Computer Engineering Undergraduate">
-<meta property="og:description" content="Portfolio of Hafees Ahamed — Computer Engineering undergraduate at University of Peradeniya, passionate about embedded systems and systems programming.">
+<meta property="og:title" content="Contact | Hafees Ahamed">
+<meta property="og:description" content="Contact Hafees Ahamed.">
 <meta property="og:image" content="https://hafees14.github.io/My_Web_Portfolio_v2/profile.jpg">
-<meta property="og:url" content="https://hafees14.github.io/My_Web_Portfolio_v2/index.html">
+<meta property="og:url" content="https://hafees14.github.io/My_Web_Portfolio_v2/contact.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="profile.jpg" type="image/jpeg">
 <link rel="stylesheet" href="style.css" />
@@ -25,7 +25,7 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo">HA<span class="dot">.</span></a>
       <ul class="nav-list" id="nav-list">
-        <li><a href="index.html" class="nav-link active" aria-current="page">About</a></li>
+        <li><a href="index.html" class="nav-link">About</a></li>
         <li><a href="news.html" class="nav-link">News</a></li>
         <li><a href="education.html" class="nav-link">Education</a></li>
         <li><a href="certifications.html" class="nav-link">Certifications</a></li>
@@ -35,7 +35,7 @@
         <li><a href="experience.html" class="nav-link">Experience</a></li>
         <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
         <li><a href="awards.html" class="nav-link">Awards</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -62,48 +62,49 @@
     </aside>
     <main class="content" id="main-content" tabindex="-1">
       <div class="content-header">
-        <span class="section-label">About</span>
-        <h1 class="page-title">Driven by curiosity, grounded in engineering.</h1>
+        <span class="section-label">Let's Connect</span>
+        <h1 class="page-title">Get In Touch</h1>
       </div>
-      <div class="about-body">
-        <p>I am a Computer Engineering undergraduate at the University of Peradeniya with a strong interest in software development, embedded systems, and systems-level programming. I enjoy solving real-world problems by combining technical depth with creative thinking.</p>
-        <p>Outside of academics, I work on hands-on projects that explore how software interacts with hardware. I am always curious about how things work and continuously seek to improve my skills through building.</p>
-        <p>My project work spans full-stack web development with React and Spring Boot, low-level systems programming in C and ARM Assembly, and desktop application development in C#. I am a fast learner and a strong team contributor, and I'm open to internships and flexible part-time roles where I can keep growing while delivering real value.</p>
+      <p class="page-lede" style="margin-bottom:2rem;">I am open to internship opportunities, collaborative projects, and interesting conversations about technology. Feel free to reach out through any of the channels below, or send a message directly.</p>
+      <div class="contact-page-grid">
+        <div class="contact-list">
+          <a href="mailto:hafeeskhalid02@gmail.com" class="card contact-row">
+            <div class="contact-row-icon"><i class="fas fa-envelope"></i></div>
+            <div><p class="contact-row-label">Email</p><p class="contact-row-value">hafeeskhalid02@gmail.com</p></div>
+          </a>
+          <a href="https://www.linkedin.com/in/hafeesahamed" target="_blank" rel="noopener" class="card contact-row">
+            <div class="contact-row-icon"><i class="fab fa-linkedin"></i></div>
+            <div><p class="contact-row-label">LinkedIn</p><p class="contact-row-value">hafeesahamed</p></div>
+          </a>
+          <a href="https://github.com/Hafees14" target="_blank" rel="noopener" class="card contact-row">
+            <div class="contact-row-icon"><i class="fab fa-github"></i></div>
+            <div><p class="contact-row-label">GitHub</p><p class="contact-row-value">Hafees14</p></div>
+          </a>
+          <a href="tel:+94768009976" class="card contact-row">
+            <div class="contact-row-icon"><i class="fas fa-phone"></i></div>
+            <div><p class="contact-row-label">Phone</p><p class="contact-row-value">+94 76 800 9976</p></div>
+          </a>
+        </div>
+        <div class="card contact-form-card">
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvzdewpr" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="stats-row">
-        <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Projects Built</span></div>
-        <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Languages Known</span></div>
-        <div class="stat-item"><span class="stat-num">2+</span><span class="stat-label">Years Learning</span></div>
-      </div>
-
-      <h2 class="subheading">Latest Updates</h2>
-      <div class="news-preview-grid">
-        <a href="news.html" class="card news-preview-card">
-          <img src="assets/news/agritech-startup-spark-2026.jpg" alt="TIMESWARE AgriTech Startup Spark 2026 Top 10 selection" loading="lazy">
-          <div class="news-preview-body">
-            <time class="news-date" datetime="2026-09-08">08 Sep 2026</time>
-            <h4>TIMESWARE advances to the Top 10 of AgriTech Startup Spark 2026</h4>
-            <span class="news-cta">Read more &rarr;</span>
-          </div>
-        </a>
-        <a href="news.html" class="card news-preview-card">
-          <img src="assets/news/xcellerate-2026.jpg" alt="TIMESWARE Xcellerate 2026 Top 25 selection" loading="lazy">
-          <div class="news-preview-body">
-            <time class="news-date" datetime="2026-08-20">20 Aug 2026</time>
-            <h4>TIMESWARE selected as a Top 25 team at Xcellerate 2026</h4>
-            <span class="news-cta">Read more &rarr;</span>
-          </div>
-        </a>
-        <a href="news.html" class="card news-preview-card">
-          <img src="assets/news/project-nova-2026.jpg" alt="TIMESWARE Project Nova Flash Round selection" loading="lazy">
-          <div class="news-preview-body">
-            <time class="news-date" datetime="2026-08-20">20 Aug 2026</time>
-            <h4>TIMESWARE selected for the Project Nova Flash Round</h4>
-            <span class="news-cta">Read more &rarr;</span>
-          </div>
-        </a>
-      </div>
-      <p class="news-preview-more"><a href="news.html" class="news-cta">View all updates &rarr;</a></p>
     </main>
   </div>
   <footer class="footer">
